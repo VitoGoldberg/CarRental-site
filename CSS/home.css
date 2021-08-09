@@ -113,7 +113,7 @@
   height: 428px;
   width: 390px;
   margin: auto;
-  border: 1px #c13 solid;
+  /*border: 1px #c13 solid;*/
 }
 
 
@@ -262,4 +262,5 @@ margin: auto;
   font-weight: 700;
   border: none;
   box-shadow: 4px 4px 0px 0px rgba(239, 239, 239, 1);
+  cursor: pointer;
 }

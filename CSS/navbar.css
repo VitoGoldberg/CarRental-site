@@ -13,6 +13,9 @@
     justify-content: space-around;
     align-items: center;
   }
+  .logo {
+    margin: auto;
+  }
   .navbar-wrap {
     display: flex;
     flex-flow: row nowrap;

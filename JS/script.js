@@ -32,32 +32,31 @@ window.onscroll = function fixedNavbar() {
 };
 
 /*селект языка
-let select = function () {
-  let selectHeader = document.querySelectorAll('.select__header');
-  let selectItem = document.querySelectorAll('.select__item');
+let selectLanguage = function () {
+  let selectLanguageHeader = document.querySelectorAll('.select_lng_header');
+  let selectLanguageItem = document.querySelectorAll('.select_lng_item');
 
   selectHeader.forEach(item => {
-      item.addEventListener('click', selectToggle)
+      item.addEventListener('click', selectLanguageToggle)
   });
 
   selectItem.forEach(item => {
-      item.addEventListener('click', selectChoose)
+      item.addEventListener('click', selectLanguageChoose)
   });
 
-  function selectToggle() {
-      this.parentElement.classList.toggle('is-active');
+  function selectLanguageToggle() {
+      this.parentElement.classList.toggle('is-active-lng');
   }
 
-  function selectChoose() {
+  function selectLanguageChoose() {
       let text = this.innerText,
           select = this.closest('.select'),
-          currentText = select.querySelector('.select__current');
+          currentText = select.querySelector('.select__current-lng');
       currentText.innerText = text;
-      select.classList.remove('is-active');
+      select.classList.remove('is-active-lng');
   }
 };
-select();
-*/
+selectLanguage();*/
 
 
 //---переход по якорям меню---
@@ -166,52 +165,95 @@ dropOffSwitcClass.addEventListener('click', () => {
 
 //---Табы с выбором модели---
 let models = [
-  {model:'VW Golf II 2019', price: '37.40', doors: '4', seats: '5', luggage: '2 Suitcases / 2 Bags', transmission: 'Mechanic', airConditioning: 'Ýes', minAge: '21'},
-  {model:'Audi A1 S-Line 2019', price: '70.40', doors: '4', seats: '5', luggage: '2 Suitcases / 2 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'Toyota Camry 13', price: '75.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Mechanic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'BMW 320 ModernLine', price: '100.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'Mervedes-Benz GLK 320', price: '100.40', doors: '4', seats: '5', luggage: '3 Suitcases / 4 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'VW Passat CC 2020', price: '100.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'},  
-  {model:'Audi A1 S-Line 2021', price: '80.40', doors: '4', seats: '5', luggage: '2 Suitcases / 2 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'Toyota Camry 14', price: '80.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Mechanic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'BMW 350 ModernLine', price: '100.40', doors:'4' , seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'Mervedes-Benz GLK 380', price: '120.40', doors: '4', seats: '5', luggage: '3 Suitcases / 4 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'VW Passat CC 2021', price: '120.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'Toyota Camry 15', price:'97.40', doors:'4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'VW Golf II 2021', price: '90.40', doors: '4', seats: '5', luggage: '2 Suitcases / 2 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'}, 
-  {model:'BMW 380 ModernLine', price: '120.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Ýes', minAge: '25'},
+  {model:'VW Golf II 2019', typeOfBody: 'Hatchback', price: '37.40', doors: '4', seats: '5', luggage: '2 Suitcases / 2 Bags', transmission: 'Mechanic', airConditioning: 'No', minAge: '21', img: 'vehicle1.jpg'},
+  {model:'Audi A1 S-Line 2019', typeOfBody: 'Hatchback', price: '70.40', doors: '4', seats: '5', luggage: '2 Suitcases / 2 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '21', img: 'vehicle2.jpg'}, 
+  {model:'Toyota Camry 13', typeOfBody: 'Sedan', price: '75.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Mechanic', airConditioning: 'Yes', minAge: '21', img: 'vehicle3.jpg'}, 
+  {model:'BMW 320 ModernLine', typeOfBody: 'Sedan', price: '100.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '25', img: 'vehicle4.jpg'}, 
+  {model:'Mervedes-Benz GLK 320', typeOfBody: 'SUV', price: '100.40', doors: '4', seats: '5', luggage: '3 Suitcases / 4 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '25', img: 'vehicle5.jpg'}, 
+  {model:'VW Passat CC 2020', typeOfBody: 'Sedan', price: '100.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '25', img: 'vehicle6.jpg'},  
+  {model:'Audi A1 S-Line 2021', typeOfBody: 'Hatchback', price: '80.40', doors: '4', seats: '5', luggage: '2 Suitcases / 2 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '21', img: 'vehicle2.jpg'}, 
+  {model:'Toyota Camry 14', typeOfBody: 'Sedan', price: '80.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Mechanic', airConditioning: 'Yes', minAge: '21', img: 'vehicle3.jpg'}, 
+  {model:'BMW 350 ModernLine', typeOfBody: 'Sedan', price: '100.40', doors:'4' , seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '25', img: 'vehicle4.jpg'}, 
+  {model:'Mervedes-Benz GLK 380', typeOfBody: 'SUV', price: '120.40', doors: '4', seats: '5', luggage: '3 Suitcases / 4 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '25', img: 'vehicle5.jpg'}, 
+  {model:'VW Passat CC 2021', typeOfBody: 'Sedan', price: '120.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '25', img: 'vehicle6.jpg'}, 
+  {model:'Toyota Camry 15', typeOfBody: 'Sedan', price:'97.40', doors:'4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '25', img: 'vehicle3.jpg'}, 
+  {model:'VW Golf II 2021', typeOfBody: 'Hatchback', price: '90.40', doors: '4', seats: '5', luggage: '2 Suitcases / 2 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '25', img: 'vehicle1.jpg'}, 
+  {model:'BMW 380 ModernLine', typeOfBody: 'Sedan', price: '120.40', doors: '4', seats: '5', luggage: '2 Suitcases / 3 Bags', transmission: 'Automatic', airConditioning: 'Yes', minAge: '25', img: 'vehicle4.jpg'},
 ];
 
-let selectedModel = models[0];
+let selectedModel = models[0];//выбранная модель(при загрузке 1я)
 let forwardButton = document.querySelector('#upButton');
 let backButton = document.querySelector('#downButton');
 let startArr = 0;
 let endArr = startArr + 6;
 
-//видимая в табах часть
+//видимая в табах часть массива models
 let visibleCars = models.slice(startArr, endArr);
+//для перезаписи значений в табы
 let tabs = document.querySelectorAll('.model__name');
-
+//соответствие массивов треугольников и табов и навсека active
+let triangleArr = document.querySelectorAll('.tab_triangle')
+let selectedTabs = document.querySelectorAll('.models__tab');
+//перезапись текстовых значений в табах
+//при загрузке страницы первый таб-выбранный
 function reWriteTabs() {
   let i = 0;
+  rewriteCharatceristics();//вызов при загрузке страницы
   for (tab of tabs) {
     tab.innerHTML = visibleCars[i].model;
+    let selectedTriangle = triangleArr[i];
     if (tab.textContent === selectedModel.model){
       tab.parentNode.classList.add('models__tab-isactive');
+      selectedTriangle.classList.add('tab_triangle_selected');
     } else {
       tab.parentNode.classList.remove('models__tab-isactive');
+      selectedTriangle.classList.remove('tab_triangle_selected');
     }
     i++;
   }
 }
-reWriteTabs();
+reWriteTabs();//перезапись текста и active класса при загрузке страницы
 
-function triangleSelektor (i) {
-  let triangleArr = document.querySelectorAll('.tab_triangle')
-  let selectedTriangle = triangleArr[i];
-  selectedTriangle.classList.add('.tab_triangle_selected')
+
+//определение выбранной модели по клику на табе
+for (itemtab of selectedTabs) {
+  itemtab.addEventListener('click', function() {
+    //перезапись переменной;находим в массиве models элемент с текстом из таба
+    selectedModel = models.find(item => item.model == this.textContent);
+    reWriteTabs();
+    rewriteCharatceristics ();
+  })
 }
-//перелистывание вниз
+//перезапись характеристик и смена картинки
+//перезапись значений в таблицу
+function rewriteCharatceristics () {
+  let price = document.querySelector('.price_value');
+  let model = document.querySelector('.tab_model_value');
+  let doors = document.querySelector('.tab_doors_value');
+  let seats = document.querySelector('.tab_seats_value');
+  let luggage = document.querySelector('.tab_luggage_value');
+  let trancmission = document.querySelector('.tab_Transmission_value');
+  let airCondition = document.querySelector('.tab_AirCondition_value');
+  let age = document.querySelector('.tab_MinAge_value');
+  
+  price.innerHTML ='$ ' +  selectedModel.price;
+  model.innerHTML = selectedModel.model;
+  doors.innerHTML = selectedModel.doors;
+  seats.innerHTML = selectedModel.seats;
+  luggage.innerHTML = selectedModel.luggage;
+  trancmission.innerHTML = selectedModel.transmission;
+  airCondition.innerHTML = selectedModel.airConditioning;
+  age.innerHTML = selectedModel.minAge;
+  changeCarImgSrc ();
+}
+//смена картинки по клику
+function changeCarImgSrc () {
+  let url = document.querySelector('#carImg');
+  url.src="img/cars__tabs/" + selectedModel.img;
+  console.log(url.src)
+} 
+
+//перелистывание табов вниз
 downButton.addEventListener('click', function() {
   if (endArr < models.length) {
     startArr++;
@@ -220,7 +262,7 @@ downButton.addEventListener('click', function() {
   visibleCars = models.slice(startArr, endArr);
   reWriteTabs();
 })
-//перелистывание вверх
+//перелистывание табов вверх
 upButton.addEventListener('click', function() {
   if (startArr > 0) {
     startArr--;
@@ -230,26 +272,6 @@ upButton.addEventListener('click', function() {
   reWriteTabs();
 })
 
-//определение параметров текущей модели
-//при загрузке страницы первый таб-выбранный
-
-
-//console.log(selectedModel.model);
-//.classList.add('models__tab-isactive'); 
-
-let selectedTabs = document.querySelectorAll('.models__tab');
-
-for (itemtab of selectedTabs) {
-  itemtab.addEventListener('click', function() {
-    changeSelectedModel(this);
-    console.log(selectedModel);
-  })
-}
-
-function changeSelectedModel(selectedTab) {
-  selectedModel = models.find(item => item.model == selectedTab.textContent);
-  reWriteTabs();
-}
 
 
 

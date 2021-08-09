@@ -85,8 +85,19 @@ header {
 .select__item:hover {
   background-color: #f2f2f2ff;
 }*/
+.select__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 14px;
+  width: 14px;
+  margin: auto;
+  margin-left: auto;
+  margin-right: 4px;
+  border: #fff 1px solid;
+}
 #selectIcon {
   width: 10px;
   height: 10px;
-  margin-right: 10px;
+  padding: auto;
 }

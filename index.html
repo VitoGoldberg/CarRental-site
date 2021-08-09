@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/customer.css">
+    <link rel="stylesheet" href="CSS/social.css">
+    <link rel="stylesheet" href="CSS/vehiclemodel.css">
+    <link rel="stylesheet" href="CSS/reviews.css">
+    <!--стили для карты сюда добавить-->
+    <link rel="stylesheet" href="CSS/contacts.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--Исчезающий хэдер -->
+    <header class="header">
+        <div class="header-container">
+            <p class="phone">CONTACT: (123) 456-7890</p>
+            <div class="language__select">
+                <div class="select__header">
+                    <span class="select__your__language">Select your language</span>
+                    <div class="select__icon">&times;</div>
+                </div>
+                <div class="select__body">
+                    <div class="select__item">
+                        <img class="language__icon" src="img/icons/us.svg" alt="EN">
+                        <span>English</span>
+                    </div>
+                    <div class="select__item">
+                        <img class="language__icon" src="img/icons/ru.svg" alt="RU">
+                        <span>Русский</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Навбар с меню -->
+    <nav class="navbar">
+        <div class="container">
+        <div class="logo">
+            <img class="navbar-logo" src="img/logo-red.gif" alt="logo">
+        </div>
+                    <div class="navbar-wrap">
+                        <ul class="navbar-menu">
+                             <li><a class="active" href="#Home">Home</a></li>
+                             <li><a href="#Services">Services</a></li>
+                             <li><a href="#Models">Vehicle Models</a></li>
+                             <li><a href="#Location">Location</a></li>
+                             <li><a href="#Contacts">Contacts</a></li>
+                        </ul>
+                        <a class="blog-select" href="#">Blog</a>
+                    </div>    
+                </div>       
+    </nav>
+    <main>
+
+<section class="section__navigation" id="Home">
+<h2>Home</h2>
+<div class="reservation__container">
+<div class="reservation__peeker__container">
+    <!--Селект модели-->
+    <div class="order__car__container">
+     <form action="" class="order__car">
+         <!--селект-->
+        <div class="select__model">
+             <div class="select__model__header">
+                 <span class="select__model__current">Select your car model</span>
+                 <div class="select__model__icon"><img src="img/icons/model_dropdown.svg" alt=""></div>
+             </div>
+             <div class="select__model__body">
+                 <div class="select__model__item">VW Golf II 2019</div>
+                 <div class="select__model__item">Audi A1 S-Line 2019</div>
+                 <div class="select__model__item">Toyota Camry 13</div>
+                 <div class="select__model__item">BMW 320 ModernLine</div>
+                 <div class="select__model__item">Mervedes-Benz GLK 320</div>
+                 <div class="select__model__item">VW Passat CC 2020</div>
+                 <div class="select__model__item">Audi A1 S-Line 2021</div>
+                 <div class="select__model__item">Toyota Camry 14</div>
+                 <div class="select__model__item">BMW 350 ModernLine</div>
+                 <div class="select__model__item">Mervedes-Benz GLK 380</div>
+                 <div class="select__model__item">VW Passat CC 2021</div>
+                 <div class="select__model__item">Toyota Camry 15</div>
+                 <div class="select__model__item">VW Golf II 2021</div>
+                 <div class="select__model__item">BMW 380 ModernLine</div>
+             </div>
+         </div>
+         <div class="adress-container">
+             <div class="adress_point">
+                 <img src="img/icons/mapsmark.svg" alt="mapsmark">
+                 <span class="adress__place">Pick-up</span>
+            </div>
+             <input type="text" name="pick-up" id="pick-up__input">
+        </div>
+        <div class="drop-off__switcher"><span>Need a different drop-off location?</span></div>
+        <div class="adress-container drop-off_visible">
+            <div class="adress_point">
+                <img src="img/icons/mapsmark.svg" alt="mapsmark">
+                <span class="adress__place">Drop-off</span>
+            </div>
+            <input type="text" name="drop-off" id="drop-off__input">
+       </div>
+         <!--кнопка отправки заказа-->
+         <div class="continue__button"><input type="submit" value="CONTINUE CAR RESERVATION"></div>
+     </form>
+    </div>
+ <!--Первый слайдер с преимуществами-->
+ <div class="advantages-container">
+    <div class="car__advantages__choice">
+        <div class="car_sliderline">
+            <div class="car__advantage__container">
+                <span class="slide__title">LUXURY CAR FROM FROM $28 DAY</span>
+                <span class="slide__advantage">Treat yourself in USA</span>
+            <img src="img/cars/car2.png" class="advantage_image" alt="BMW">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">GET 15% OFF YOUR RENTAL</span>
+                <span class="slide__advantage">Plan your trip now</span>
+                <img src="img/cars/car1.png" class="advantage_image" alt="Mercedes">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">LUXURY CAR FROM FROM $28 DAY</span>
+                <span class="slide__advantage">Treat yourself in USA</span>
+            <img src="img/cars/car2.png" class="advantage_image" alt="BMW">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">GET 15% OFF YOUR RENTAL</span>
+                <span class="slide__advantage">Plan your trip now</span>
+                <img src="img/cars/car1.png" class="advantage_image" alt="Mercedes">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">LUXURY CAR FROM FROM $28 DAY</span>
+                <span class="slide__advantage">Treat yourself in USA</span>
+            <img src="img/cars/car2.png" class="advantage_image" alt="BMW">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">GET 15% OFF YOUR RENTAL</span>
+                <span class="slide__advantage">Plan your trip now</span>
+                <img src="img/cars/car1.png" class="advantage_image" alt="Mercedes">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">LUXURY CAR FROM FROM $28 DAY</span>
+                <span class="slide__advantage">Treat yourself in USA</span>
+            <img src="img/cars/car2.png" class="advantage_image" alt="BMW">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">GET 15% OFF YOUR RENTAL</span>
+                <span class="slide__advantage">Plan your trip now</span>
+                <img src="img/cars/car1.png" class="advantage_image" alt="Mercedes">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">LUXURY CAR FROM FROM $28 DAY</span>
+                <span class="slide__advantage">Treat yourself in USA</span>
+            <img src="img/cars/car2.png" class="advantage_image" alt="BMW">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">GET 15% OFF YOUR RENTAL</span>
+                <span class="slide__advantage">Plan your trip now</span>
+                <img src="img/cars/car1.png" class="advantage_image" alt="Mercedes">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">LUXURY CAR FROM FROM $28 DAY</span>
+                <span class="slide__advantage">Treat yourself in USA</span>
+            <img src="img/cars/car2.png" class="advantage_image" alt="BMW">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">GET 15% OFF YOUR RENTAL</span>
+                <span class="slide__advantage">Plan your trip now</span>
+                <img src="img/cars/car1.png" class="advantage_image" alt="Mercedes">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">LUXURY CAR FROM FROM $28 DAY</span>
+                <span class="slide__advantage">Treat yourself in USA</span>
+            <img src="img/cars/car2.png" class="advantage_image" alt="BMW">
+            </div>
+            <div class="car__advantage__container">
+                <span class="slide__title">GET 15% OFF YOUR RENTAL</span>
+                <span class="slide__advantage">Plan your trip now</span>
+                <img src="img/cars/car1.png" class="advantage_image" alt="Mercedes">
+            </div>
+        </div>   
+    </div>
+    <div class="slider_navigation">
+            <img src="img/icons/left-arrow.svg" class="left_arrow" alt="Left">
+            <img src="img/icons/left-arrow.svg" class="right_arrow" alt="Left">
+    </div>
+ </div>
+</div>
+</div>
+<div class="home-triangle"></div>
+</section>
+
+
+<!--Customer Services-->
+<section class="section__navigation" id="Services">
+<h2>Customer Services</h2>
+<!--Преимущества-->
+<div class="advantages__container">
+    <article class="advantage">
+        <img src="img/icons/plus.jpg" alt="Plus" class="advantage__logo">
+        <h3 class="advantage__heading">Special rates on car booking</h3>
+        <p class="advantage__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa rerum in beatae ducimus, tenetur voluptatibus doloribus porro quibusdam quod qui quisquam explicabo distinctio, sit sequi nobis incidunt quis soluta inventore recusandae!</p>
+    </article>
+    <article class="advantage">
+        <img src="img/icons/plus.jpg" alt="Plus" class="advantage__logo">
+        <h3 class="advantage__heading">Mobile Phone Reservation</h3>
+        <p class="advantage__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa rerum in beatae ducimus, tenetur voluptatibus doloribus porro quibusdam quod qui quisquam explicabo distinctio, sit sequi nobis incidunt quis soluta inventore recusandae!</p>
+    </article>
+    <article class="advantage">
+        <img src="img/icons/plus.jpg" alt="Plus" class="advantage__logo">
+        <h3 class="advantage__heading">Unlimited Miles Car Rental</h3>
+        <p class="advantage__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa rerum in beatae ducimus, tenetur voluptatibus doloribus porro quibusdam quod qui quisquam explicabo distinctio, sit sequi nobis incidunt quis soluta inventore recusandae!</p>
+    </article>
+    <article class="advantage">
+        <img src="img/icons/plus.jpg" alt="Plus" class="advantage__logo">
+        <h3 class="advantage__heading">One Way Car Rentals</h3>
+        <p class="advantage__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsa rerum in beatae ducimus, tenetur voluptatibus doloribus porro quibusdam quod qui quisquam explicabo distinctio, sit sequi nobis incidunt quis soluta inventore recusandae!</p>
+    </article>
+</div>
+
+<!--Соцсети&подписка-->
+<div class="social">
+    <div class="social__container">
+        <div class="social__text__container">
+            <span id="social_1">SIGN UP FOR AMAZING OFFERS</span>
+            <span id="social_2">EXCLUSIVE ACCESS FOR OFFERS AND PROMOTIONS</span>
+        </div>
+        <div class="input__wrapper">
+            <input type="email" class="email__enter" placeholder="Enter your Email Address">
+            <input type="submit" class="email__send" value="SEND">
+        </div>
+        <div class="social__icons">
+            <img src="img/icons/twitter.svg" alt="Twitter" class="social__icon">
+            <img src="img/icons/instagram.svg" alt="Instagram" class="social__icon">
+            <img src="img/icons/facebook.svg" alt="Facebook" class="social__icon">
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section class="section__navigation" id="Models">
+    <div class="container">
+      <h2>Vehicle Models - Our rental fleet at a glance</h2>
+      <!--выбор модели на 6ти табах-->
+      <div class="models__container">
+        <div class="models__tabs">
+          <div class="models__tab"><p class="model__name">1</p></div>
+          <div class="models__tab"><p class="model__name">2</p></div>
+          <div class="models__tab"><p class="model__name">3</p></div>
+          <div class="models__tab"><p class="model__name">4</p></div>
+          <div class="models__tab"><p class="model__name">5</p></div>
+          <div class="models__tab"><p class="model__name">6</p></div>
+          <div class="buttons__container">
+            <div class="tab__btn" id="upButton">
+                <img src="img/icons/tab_up.svg" alt="UP">
+            </div>
+            <div class="tab__btn" id="downButton">
+                <img src="img/icons/tab_down.svg" alt="DOWN">
+            </div>
+        </div>
+    </div>
+    <div class="models__image">
+        <img src="img/cars__tabs/vehicle1.jpg" alt="car">
+    </div>
+    <!--характеристики выбранной модели-->
+    <div class="models__specifications">
+        <div class="models_specification_price">
+            <span class="price_value">$ 100.40</span>
+            <span class="price_per_day"> rent per day</span>
+        </div>
+        <div class="models_specification_tab">
+            <span class="tab_model">Model</span>
+            <span class="tab_model_value">Supra</span>
+        </div>
+        <div class="models_specification_tab">
+            <span class="tab_doors">Doors</span>
+            <span class="tab_doors_value"></span>
+        </div>
+        <div class="models_specification_tab">
+            <span class="tab_seats">Seats</span>
+            <span class="tab_seats_value"></span>
+        </div>
+        <div class="models_specification_tab">
+            <span class="tab_luggage">Luggage</span>
+            <span class="tab_luggage_value"></span>
+        </div>
+        <div class="models_specification_tab">
+            <span class="tab_Transmission">Transmission</span>
+            <span class="tab_Transmission_value"></span>
+        </div>
+        <div class="models_specification_tab">
+            <span class="tab_AirCondition">Air Conditioning</span>
+            <span class="tab_AirCondition_value"></span>
+        </div>
+        <div class="models_specification_tab nonborder" >
+            <span class="tab_MinAge">Minimum age</span>
+            <span class="tab_MinAge_value"></span>
+        </div>
+        <div class="reserve_btn"><a href="#">RESERVE NOW</a></div>
+    </div>
+</div>
+</div>
+
+<!--Отзывы-->
+<div class="reviews">
+    <div class="stars__container">
+        <span class="star crimson-star">★</span>
+        <span class="star crimson-star">★</span>
+        <span class="star crimson-star">★</span>
+        <span class="star crimson-star">★</span>
+        <span class="star crimson-star">★</span> 
+    </div>
+    <div class="reviews_container">
+       <div class="reviews_slide slide_visible">
+           <p class="review__text">It is always a positive experience when renting from your 5th street location. The staff is very professional and efficient and always smiling. And I always feel welcome and appreciated. The management is always prompt to solve any issue at any moment. Their efficiency and professionalism makes it my number one choice.</p>
+           <span class="review__title">– Michael Smith, Santa Barbara CA</span>
+       </div>
+       <div class="reviews_slide">
+           <p class="review__text">This rental was the best rental experience ever! After completing all details on-line myself, the pick-up was super efficient, extremely friendly, and free of the usual 5 - 10 min very unpleasant drilling of why one is not signing up to all options (insurance, etc). I was handed the keys and a wide register print out that required...</p>
+           <span class="review__title">– Jon Doe, Las Vegas NV</span>
+       </div>
+       <div class="reviews_slide">
+           <p class="review__text">This was my first time renting from car|rental. And over all it was a wonderful experience I have no complaints. The service rep help me find the best rental to suit my needs. I also love the fact that you guys provide luxury rentals at a great price. I will definitely rent with this company again.</p>
+           <span class="review__title">– Eugine Whalles, Santa Barbara CA</span>
+       </div>
+    </div>
+    <div class="reviews_dots">
+      <div class="dot dot_pressed"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+</div>
+</section>
+
+
+
+<section class="section__navigation" id="Location">
+<h2>Location</h2>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus magni cumque impedit, ducimus sint laboriosam incidunt, quidem soluta aperiam obcaecati amet corrupti eius voluptatum in, magnam repudiandae. Nulla porro architecto temporibus, mollitia doloremque in dolorem voluptas culpa eligendi obcaecati asperiores officia consequatur accusantium debitis voluptatem distinctio, dolor perspiciatis voluptatum dolore itaque delectus excepturi ipsam numquam. Molestiae iste dolore temporibus placeat impedit libero voluptas delectus in iusto asperiores, dolor amet necessitatibus odio vitae dolorem fugit qui pariatur. Perspiciatis quasi officiis, neque non maxime numquam velit aliquid quod nemo natus aut eaque in distinctio ratione veniam dolorum ab dignissimos. Assumenda ipsam labore magni saepe deserunt expedita. Doloremque ipsa eum rerum quasi exercitationem nobis esse officiis dolor praesentium unde, quas nisi maiores, similique facere sapiente adipisci explicabo velit? Numquam culpa sed reiciendis nulla? Commodi ea atque eius consequatur quidem, delectus quo debitis eligendi ad incidunt, quis alias pariatur modi corporis sed nostrum veritatis laborum, nesciunt non ipsa laboriosam voluptatum! Vero, amet! Repellendus illum consequuntur doloremque obcaecati atque nostrum, consectetur temporibus unde deleniti veniam a distinctio iusto suscipit autem, rerum explicabo inventore ab asperiores est sed ducimus corporis. Doloribus laborum maxime, dolor eos animi, perspiciatis iusto assumenda doloremque beatae quaerat corporis necessitatibus dolorem numquam inventore eius veritatis tenetur sint totam dolorum, molestiae voluptatem! Necessitatibus saepe ipsam similique omnis possimus modi excepturi enim aperiam placeat quisquam debitis asperiores alias ea dolor neque atque nostrum quod quidem eum beatae, iure labore fuga voluptas? Impedit, maxime. Ea illo eum cumque! Explicabo, mollitia. Asperiores magnam, laudantium facere corporis tenetur molestiae quasi quis ducimus enim corrupti sit soluta ut ratione eligendi accusamus quidem expedita! Sapiente itaque nihil magni soluta iure, et omnis alias unde deleniti possimus amet! Hic accusamus vero reiciendis deleniti quis debitis iste, ipsa quibusdam omnis optio, adipisci voluptas modi veritatis blanditiis rerum ex. Totam corrupti asperiores explicabo delectus facilis hic odio culpa nam, nobis amet animi quidem possimus nesciunt. Architecto at minima harum quaerat optio veniam fugit velit maiores mollitia incidunt expedita reiciendis dolorem vero dignissimos, doloribus exercitationem alias. Eum praesentium, molestias est doloremque quasi nisi! Consequatur, maiores sint voluptate asperiores corrupti quae molestiae beatae molestias nemo soluta ipsam consequuntur nobis! Unde facere magni libero totam, corrupti labore nam cupiditate quas maxime ab illum repellendus explicabo dolore. Nobis fuga saepe perferendis pariatur, at, eligendi necessitatibus recusandae veniam repellat maiores accusantium. Maiores, iure dicta quos dolores voluptatibus inventore asperiores totam, dolorem, molestias maxime sit eum temporibus error quis. Temporibus delectus perspiciatis dolor iusto, doloribus, iure ex voluptatem qui quis maxime mollitia saepe molestias distinctio quam vel non nostrum at nam ad cum nobis aperiam officiis cupiditate. Temporibus dicta dolorum ducimus vel illo molestias, deleniti error iusto impedit facilis repudiandae rem eum nam est sapiente soluta doloribus sunt fugiat distinctio vitae culpa mollitia quos dolore? Odio quis voluptatem consectetur, deserunt iusto, fuga quod quidem soluta sunt suscipit doloribus placeat? Rerum quae illum ducimus saepe rem quam facere voluptas facilis, ab nihil nisi similique ea tempora voluptates ut ullam totam deleniti tenetur numquam qui quasi beatae enim libero. Animi dignissimos praesentium consectetur asperiores quas vitae quaerat atque earum maiores, quia sed amet, tempora at excepturi nesciunt. Pariatur doloribus, tenetur neque at repudiandae ratione sint? Dolor sunt error ut odio. Asperiores, quidem numquam minima velit veniam dicta rem ducimus nisi fuga porro saepe nemo maxime ipsam eos ea possimus natus totam magni accusantium atque repellat! Obcaecati qui iusto reprehenderit enim totam sit a delectus aliquid voluptatibus voluptate mollitia suscipit, ratione accusamus rerum eum facilis sequi illum. Distinctio quam itaque, voluptas totam inventore vel accusantium at reiciendis vero dolor blanditiis tempore nam, eos excepturi repudiandae quibusdam culpa accusamus illum natus earum ipsa quisquam dicta corrupti animi! Inventore porro dolore, libero accusantium ipsam officiis sequi vel velit perferendis reiciendis reprehenderit quisquam? Perspiciatis suscipit maxime quisquam non dolorem doloribus expedita nisi, eveniet, dolore nobis voluptas, harum a quos officia blanditiis incidunt! Rerum, perspiciatis impedit itaque cupiditate est, expedita, iste labore modi fugit voluptatibus accusamus. Cumque facilis numquam reprehenderit dignissimos obcaecati exercitationem recusandae doloribus quisquam sit. Officia adipisci obcaecati qui aut placeat. Dolores dicta porro eligendi omnis, illum hic, cum ratione itaque sapiente provident sed molestiae similique architecto eius. Nesciunt expedita eos qui reiciendis culpa, explicabo sed illum esse aliquid a aliquam debitis perspiciatis nulla ipsa, inventore deleniti excepturi numquam. In deleniti sunt quae velit magni tempora iure laborum sed, ratione cumque rerum quia minima perferendis accusantium cupiditate recusandae assumenda nisi non voluptates labore? Minus mollitia laborum incidunt impedit explicabo nobis provident blanditiis molestiae veritatis quod libero quae quis commodi quibusdam, magnam dicta! At quae eligendi optio nihil, necessitatibus ratione consectetur consequuntur illo dignissimos ab atque, ipsam ex assumenda. Nisi maxime iusto praesentium! Cum mollitia blanditiis fuga voluptatem culpa, praesentium ea, qui dicta natus pariatur magnam distinctio ab cupiditate non velit? Cum, quo. Voluptates quod nam culpa. Unde iusto sapiente vel, quisquam eum ex at dolores illum officia quis magnam ratione saepe perferendis neque vitae laudantium provident atque corrupti libero natus architecto. Quidem, facilis. Id aspernatur asperiores rerum eveniet illo aut necessitatibus dolores molestiae nesciunt nulla, tenetur at, pariatur quo vitae a! Omnis sequi consequuntur placeat dolore repudiandae laudantium expedita quia et sed dolores quasi, tempora rerum aspernatur deleniti ea soluta autem. Velit architecto eligendi excepturi reprehenderit repudiandae est obcaecati exercitationem accusantium eius, fuga iusto? Cum maiores ut accusamus, ipsa atque nesciunt vero autem voluptates iusto quisquam veritatis voluptatem libero praesentium natus? Quibusdam iste explicabo odit est magnam ducimus pariatur! Hic adipisci possimus perferendis, itaque cumque officiis reiciendis, quaerat consequuntur voluptas fugiat fugit, corporis voluptatum. Expedita nostrum error incidunt reiciendis voluptates iste. Eveniet accusamus consectetur explicabo totam a laborum quidem accusantium labore ex sequi nulla minima, autem numquam voluptatem distinctio voluptate sunt odio ullam ratione nihil necessitatibus consequuntur quia excepturi sint! Quam, voluptatem velit. Inventore iusto sapiente consectetur eaque, exercitationem perferendis vitae. Dolores eum adipisci nesciunt sequi atque ex? Assumenda nemo voluptatem sunt culpa explicabo earum ipsum dignissimos magni quia, commodi facere rem labore dolor autem iure sed omnis provident a animi voluptas laborum sint qui corrupti exercitationem. Dolore iusto eaque voluptatibus magni nesciunt?</p>
+</section>
+
+
+<!--Contact us-->
+<section class="section__navigation" id="Contacts">
+    <div class="contacts__wrapper">
+<h2>Contact Us</h2>
+<div class="contact__us__container">
+<!--Форма для сообщения-->   
+    <div class="form__container">
+         <span>You have any questions or need additional information?</span>
+         <h3><span>Address: </span>Car|Rental / 3861 Sepulveda Blvd. / Culver City, CA 90230</h3>
+         <form action="#" method="post" class="123">
+             <div class="form__wrapper"><input type="text" placeholder="FirstName:" name="FirstName" id="firstName"><input type="text" placeholder="LastName:" name="LastName" id="lastName"></div>
+             <input type="tel" placeholder="Telephone:" name="telephone" id="telephone">
+             <input type="email" placeholder="Email:" name="email" id="email">
+             <textarea name="message" id="message" placeholder="Message:"cols="30" rows="10"></textarea>
+             <div class="button__block"><input type="submit" value="SUBMIT MESSAGE"></div>
+         </form>
+    </div>
+<!--Карточки менеджеров-->
+    <div class="contacts__container">
+        <span class="contacts__section">Customer Center</span>
+        <div class="contacts__card">
+            <img src="img/icons/avatar1.jpg" class="manager__avatar" alt="Avatar">
+            <div class="card__info__container">
+                <span class="manager__name">Sarah Connor</span>
+                <div class="info__container__inner"></div>
+                <h3 class="contacts__card__info"><span class="info__value">Phone: </span>666-999-888</h3>
+                <h3 class="contacts__card__info"><span class="info__value">Email: </span>connor@example.com</h3>
+            </div>
+        </div>
+        <div class="contacts__card__stripe"></div>
+        <span class="contacts__section">Change or Cancel Reservation</span>
+        <div class="contacts__card">
+            <img src="img/icons/avatar2.jpg" class="manager__avatar" alt="Avatar">
+            <div class="card__info__container">
+                <span class="manager__name">Mike Smith</span>
+                <div class="info__container__inner"></div>
+                <h3 class="contacts__card__info"><span class="info__value">Phone: </span>666-999-889</h3>
+                <h3 class="contacts__card__info"><span class="info__value">Email: </span>m.smith@example.com</h3>
+            </div>
+        </div>
+        <div class="contacts__card__stripe"></div>
+        <div class="contacts__card">
+            <img src="img/icons/avatar3.jpg" class="manager__avatar" alt="Avatar">
+            <div class="card__info__container">
+                <span class="manager__name">Jane Doe</span>
+                <div class="info__container__inner"></div>
+                <h3 class="contacts__card__info"><span class="info__value">Phone: </span>666-999-887</h3>
+                <h3 class="contacts__card__info"><span class="info__value">Email: </span>j.a.doe@example.com</h3>
+            </div>
+        </div>
+        <div class="contacts__card__stripe"></div>
+    </div>
+</div>
+</div>
+</section>      
+
+
+
+<!--Footer-->
+<footer class="footer">
+    <div class="footer-wrap">
+        <ul class="footer-menu">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Models">Vehicle Models</a></li>
+            <li><a href="#Location">Location</a></li>
+            <li><a href="#Contacts">Contacts</a></li>
+        </ul>
+<span class="copyright">Original design by <a href="http://themeforest.net/user/themeinjection">Themeinjection</a></span>
+</footer>    
+</main>
+    
+    <script src="JS/script.js"></script>
+</body>
+</html>

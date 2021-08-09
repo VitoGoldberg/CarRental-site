@@ -154,10 +154,10 @@ selectModel();
 
 
 //---Сокрытие блока "Drop-off"---
-let dropOffSwitcClass = document.querySelector('.drop-off__switcher');
+let dropOffSwitchClass = document.querySelector('.drop-off__switcher');
 let dropOff = document.querySelector('.drop-off_visible');
 
-dropOffSwitcClass.addEventListener('click', () => {
+dropOffSwitchClass.addEventListener('click', () => {
   dropOff.classList.toggle('drop-off_hide');
 })
 
